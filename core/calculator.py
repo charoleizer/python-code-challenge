@@ -17,7 +17,7 @@ def sum_custom(x):
     return str(sum(lst))
 
 
-def substract_custom_custom(x):
+def substract_custom(x):
     lst = []
     for n in str(x).split(","):
         if is_digit(n):

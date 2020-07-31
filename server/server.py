@@ -23,7 +23,7 @@ class CalculatorServicer(calculator_pb2_grpc.CalculatorServicer):
 
     def Substract(self, request, context):
         response = calculator_pb2.Number()
-        response.value = calculator.substract_custom_custom(request.value)
+        response.value = calculator.substract_custom(request.value)
         return response
 
 
