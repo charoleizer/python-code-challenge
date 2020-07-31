@@ -18,7 +18,7 @@ from core import calculator
 class CalculatorServicer(calculator_pb2_grpc.CalculatorServicer):
     def Sum(self, request, context):
         response = calculator_pb2.Number()
-        response.value = calculator.sum(request.value)
+        response.value = calculator.sum_custom(request.value)
         return response
 
 
