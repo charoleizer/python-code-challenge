@@ -14,8 +14,8 @@ channel = grpc.insecure_channel("localhost:50051")
 
 stub = calculator_pb2_grpc.CalculatorStub(channel)
 
-number = calculator_pb2.Number(value="1,4,7")
+number = calculator_pb2.Number(value="1,80,-7, 12")
 
-response = stub.Sum(number)
+response = stub.Substract(number)
 
 print(response.value)
