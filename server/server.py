@@ -26,6 +26,11 @@ class CalculatorServicer(calculator_pb2_grpc.CalculatorServicer):
         response.value = calculator.substract_custom(request.value)
         return response
 
+    def SendSum(self, request, context):
+        response = calculator_pb2.Number()
+        response.value = calculator.sendSum(request.value)
+        return response
+
 
 server = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
 

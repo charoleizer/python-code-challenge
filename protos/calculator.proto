@@ -7,4 +7,5 @@ message Number {
 service Calculator {
     rpc Sum(Number) returns (Number) {}
     rpc Substract(Number) returns (Number) {}
+    rpc SendSum(Number) returns (Number) {}
 }
