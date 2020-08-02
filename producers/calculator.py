@@ -1,12 +1,10 @@
 import pika
 
 
-def subscribeSum(numberList):
+def sendSum(x):
     connection = pika.BlockingConnection(pika.ConnectionParameters(host="localhost"))
     channel = connection.channel()
-
     channel.queue_declare(queue="sum")
+    channel.basic_publish(exchange="", routing_key="sum", body=x)
 
-    channel.basic_publish(exchange="", routing_key="sum", body=numberList)
-    print(" [x] Sum")
     connection.close()

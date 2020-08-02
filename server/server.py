@@ -12,20 +12,10 @@ import time
 import calculator_pb2
 import calculator_pb2_grpc
 
-from core import calculator
+from producers import calculator
 
 
 class CalculatorServicer(calculator_pb2_grpc.CalculatorServicer):
-    def Sum(self, request, context):
-        response = calculator_pb2.Number()
-        response.value = calculator.sum_custom(request.value)
-        return response
-
-    def Substract(self, request, context):
-        response = calculator_pb2.Number()
-        response.value = calculator.substract_custom(request.value)
-        return response
-
     def SendSum(self, request, context):
         response = calculator_pb2.Number()
         response.value = calculator.sendSum(request.value)
