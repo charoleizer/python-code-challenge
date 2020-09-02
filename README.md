@@ -1,3 +1,8 @@
+#### Learning to use gRPC and RabbitMQ (glipse on [Miro](https://miro.com/app/board/o9J_krTNw-I=/))
+
+---
+
+
 Before start please install dependecies:
 
 `$ pip install -r requirements.txt`
